@@ -56,6 +56,6 @@ document.write(`
 	<ul style="list-style: none;">
 		<li>Full name: <strong>${user.name} ${user.surname}</strong></li>
 		<li>Email: <strong>${user.email}</strong></li>
-		<li>Age: <strong>${age}</strong> years</li>
+		<li>Age: <strong>${age}</strong> ${age < 2 ? 'year' : 'years' } </li>
 	</ul>
 `);
