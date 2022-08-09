@@ -5,6 +5,9 @@ const user = {
     year: 0
 }
 
+let year = new Date().getFullYear()
+
+
 
 let enterName = prompt('Enter your name')
 
@@ -37,7 +40,7 @@ if (enterName) {
 
             let enterAge = +prompt('Enter your year of birth')
 
-            while (!enterAge) enterAge = +prompt('Enter your year of birth')
+            while (!enterAge || enterAge > year || enterAge <= 1900)  enterAge = +prompt('Enter your year of birth')
 
             if (enterAge) user.year = enterAge
         }
@@ -45,7 +48,6 @@ if (enterName) {
 
 }
 
-let year = new Date().getFullYear()
 let age = year - user.year
 
 
@@ -54,6 +56,6 @@ document.write(`
 	<ul style="list-style: none;">
 		<li>Full name: <strong>${user.name} ${user.surname}</strong></li>
 		<li>Email: <strong>${user.email}</strong></li>
-		<li>Age: <strong>${age}</strong></li>
+		<li>Age: <strong>${age}</strong> years</li>
 	</ul>
 `);
