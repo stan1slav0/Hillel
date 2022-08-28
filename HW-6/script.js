@@ -23,10 +23,13 @@ for(let i = 0; i<winter_sports.length; i++){
     console.log(winter_sports[i].join(': '))
 }
 
+console.log('')
+
 console.log(`*** Summer sports ***`);
 for(let i=0; i<summer_sports.length; i++){
     console.log(summer_sports[i].join(`: `));
 }
+console.log('')
 
 console.log(`*** Fruits ***`);
 for(let i=0; i<fruits.length; i++){
