@@ -4,29 +4,35 @@ const hero = ['Ivan'];
 const native = ['York','Of'];
 const destination = ['Poltava','In'];
 
-const rainbow = hero.concat(native, destination).reverse();
+const rainbow = destination.concat(native, hero).reverse();
 
-rainbow.unshift('Richard','Gave','Battle');
-rainbow.pop();
 
-[
-rainbow[1], 
-rainbow[5], 
-rainbow[6], 
-rainbow[2]
-] = [
-rainbow[5], 
-rainbow[1], 
-rainbow[2], 
-rainbow[6]
-];
+rainbow.splice(0,1,`Richard`); // ['Richard', 'Of', 'York', 'In', 'Poltava']
+rainbow.splice(3, 0, `Gave`, `Battle`); // ['Richard', 'Of', 'York', `Gave`, `Battle`, 'In', 'Poltava'];
+rainbow.splice(-1,1,`Vain`); // ['Richard', 'Of', 'York', `Gave`, `Battle`, 'In', 'Vain'];
 
-[rainbow[5], rainbow[3], rainbow[6], rainbow[4]] = [rainbow[3], rainbow[5], rainbow[4], rainbow[6]];
+// rainbow.unshift('Richard','Gave','Battle');
+// rainbow.pop();
 
-// Подскажите какой синтаксис будет более правильный ?
+// [
+// rainbow[1], 
+// rainbow[5], 
+// rainbow[6], 
+// rainbow[2]
+// ] = [
+// rainbow[5], 
+// rainbow[1], 
+// rainbow[2], 
+// rainbow[6]
+// ];
 
-rainbow.pop()
-rainbow.push('Vain')
+
+// [rainbow[5], rainbow[3], rainbow[6], rainbow[4]] = [rainbow[3], rainbow[5], rainbow[4], rainbow[6]];
+
+
+// rainbow.pop()
+// rainbow.push('Vain')
+
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
@@ -43,6 +49,9 @@ for(let i = 0; i<rainbow.length; i++) {
 }
 
 document.write('</div>')
+
+
+
 
 
 
