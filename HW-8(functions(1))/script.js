@@ -14,26 +14,28 @@ const food = [
 	['🍌','banana',7]
 ];
 
+function getInfo(title, array){
+    let TRs = []
 
-function getInfo (element, name) {
+    for(let i = 0; i<array.length; i++){
+        let TDs = []
 
- document.write(`<div><table>
-        <caption>${name} info</caption>
-                <tbody>`)
+        for(let j = 0; j<array[i].length; j++){
+            TDs.push(`<td>${array[i][j]}</td>`);
+        }
 
-                for(let i = 0; i<element.length; i++){
-                    document.write(`
-                
-                    <tr>
-                        <td>${element[i][0]}</td>
-                        <td >${element[i][1]}</td>
-                        <td >${element[i][2]}</td>
-                    </tr>
-                    `)
-                }
-document.write(`</tbody></table></div>`) 
+        TRs.push(`<tr>${TDs.join(``)}</tr>`
+        )
+    }
+
+    return `<table>
+    <caption>${title}</caption>
+    ${TRs.join(``)}
+    </table>`
 }
 
-getInfo(animals, 'Animals')
-getInfo(food, 'Food')
+
+document.write(getInfo(`Animals`, animals))
+document.write(getInfo(`Food`, food))
+
 
