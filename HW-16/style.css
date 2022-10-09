@@ -1,0 +1,23 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.block{
+	width: 100px;
+	height: 100px;
+	background: crimson;
+	position: relative;
+	transition: all 0.3s linear;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
