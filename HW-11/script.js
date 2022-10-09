@@ -1,41 +1,27 @@
 const obj = {
-    x: 10,
-    y: 20,
-    inner: {
-        x: 20,
-        z: 30
-    },
-    foo2: {
-        k: 23,
-        p: 13
-    }
+  x: 10,
+  y: 20,
+  inner: {
+    x: 20,
+    z: 30,
+  },
+  foo2: {
+    k: 23,
+    p: 13,
+  },
 }
 
-const convert = obj => {
+const convert = list => {
+  let newObj = {}
 
-    let newObj = {}
-    
-    for (let key in obj) { 
-
-        if (typeof obj[key] === 'object'){
-					
-            let modifiedObj = obj[key];
-
-            for (let key in modifiedObj) {
-                newObj[key] = modifiedObj[key]
-            }
-        } else newObj[key] = obj[key];
+  for (let key in list) {
+    if (typeof list[key] === 'object') {
+      Object.assign(newObj, convert(list[key]))
+    } else {
+      newObj[key] = list[key]
     }
-    return newObj
+  }
+  return newObj
 }
 
-
-console.log(newObj = convert(obj))
-
-
-
-
-
-    
-    
-
+console.log((newObj = convert(obj)))

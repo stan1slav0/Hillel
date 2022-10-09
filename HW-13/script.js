@@ -6,8 +6,7 @@ class Burger {
   }
 
   setAdditionalIngredients(...args) {
-    args.map(elem => this.ingredients.push(elem))
-    return this
+    this.ingredients.push(...args)
   }
 }
 

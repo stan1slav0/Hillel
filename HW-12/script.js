@@ -43,7 +43,9 @@ const Product = {
     return result.toFixed(2)
   },
   getInfo() {
-    return `Product: ${this.icon} ${this.name}. Type: ${this.type}. Price: $${this.getPrice()}`
+    return `Product: ${this.icon} ${this.name}. Type: ${
+      this.type
+    }. Price: $${this.getPrice()}`
   },
 }
 

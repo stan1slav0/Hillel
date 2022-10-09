@@ -119,10 +119,10 @@ const renderTbody = () => {
   const TRs = sports
     .map(sport => {
       let Europe = [],
-          America = [],
-          Asia = [],
-          Africa = [],
-          Oceania = []
+        America = [],
+        Asia = [],
+        Africa = [],
+        Oceania = []
 
       let sportIcon = sport[0]
       let sportName = sport[1]
